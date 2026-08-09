@@ -26,22 +26,15 @@ navigaatiota.
 
 ## Julkaisu
 
-Sivusto julkaistaan GitHub Pagesissa `gh-pages`-haarasta. Varsinainen osoite on
+Sivusto julkaistaan GitHub Pagesissa `gh-pages`-haarasta. Osoite on
 **<https://munkka.aiperusteet.fi/>** (custom domain, `CNAME`-tiedosto repon
-juuressa). Pohjalla oleva GitHub-osoite
-<https://mattiseise.github.io/munkka-copilot/> toimii aina, myös jos
-custom domain ei jostain syystä resolvoidu.
-
-Custom domainin toimiminen vaatii DNS-tietueen Zonerissa (aiperusteet.fi:n
-nimipalvelu), joka on tehtävä kerran Zonerin hallintapaneelissa — GitHubin
-puoli (CNAME-tiedosto, HTTPS-varmenne) hoituu automaattisesti tietueen
-lisäämisen jälkeen:
-
-```
-Tyyppi:  CNAME
-Nimi:    munkka
-Arvo:    mattiseise.github.io
-```
+juuressa; DNS: CNAME `munkka` → `mattiseise.github.io` Zonerissa,
+aiperusteet.fi:n nimipalvelussa). HTTPS on GitHubin automaattisesti
+provisioima Let's Encrypt -varmenne. Pohjalla oleva GitHub-osoite
+<https://mattiseise.github.io/munkka-copilot/> ohjaa 301:llä custom domainiin
+heti kun `CNAME`-tiedosto on repossa — sitä ei siis kannata pushata ennen
+kuin DNS-tietue jo resolvoituu, tai sivusto on hetken tavoittamattomissa
+molemmista osoitteista.
 
 Muutokset julkaistaan päivittämällä `gh-pages`-haara mainista:
 
