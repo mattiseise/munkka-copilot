@@ -23,6 +23,16 @@ Jokainen harjoitussivu toimii myös osallistujan A4-ohjeena: **Tulosta osallistu
 ohje** -painike (tai Ctrl+P) tuottaa tulostetun version ilman painikkeita ja
 navigaatiota.
 
+## Julkaisu
+
+Sivusto julkaistaan GitHub Pagesissa `gh-pages`-haarasta osoitteeseen
+<https://mattiseise.github.io/munkka-copilot/>. Muutokset julkaistaan
+päivittämällä haara mainista:
+
+```
+git push origin main:gh-pages
+```
+
 ## Päivittäminen
 
 Kuvakaappaukset ovat Microsoft 365 Copilotin näkymästä 9.8.2026. Kun Copilotin
