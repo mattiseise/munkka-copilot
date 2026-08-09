@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harjoitus 3: Ohjaako Tutki ja opi oikeasti oppimista? — Copilot-harjoitukset</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%234269D3'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia,serif' font-size='18' font-weight='600' fill='white'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/site.js" defer></script>
+</head>
+<body>
+<main>
+  <a class="back-link" href="index.html">← Takaisin harjoituksiin</a>
+  <header class="page">
+    <div class="kicker">Harjoitus 3 · Ohjattu demo tai pareittain · 7–9 min</div>
+    <h1>Ohjaako Tutki ja opi oikeasti oppimista?</h1>
+    <button class="print-btn" type="button">Tulosta osallistujan ohje</button>
+  </header>
+
+  <section class="card">
+    <div class="kicker dim">Tavoite</div>
+    <p>Opit tunnistamaan, millainen pyyntö saa Copilotin kysymään, aktivoimaan aikaisempaa tietoa ja testaamaan ymmärtämistä valmiin vastauksen antamisen sijasta.</p>
+  </section>
+
+  <section class="step">
+    <div class="step-head">
+      <span class="step-num">VAIHE 1/5</span>
+      <h2>Avaa agentti</h2>
+    </div>
+    <p>Valitse vasemmasta valikosta <strong>Lisää agentteja</strong> ja avaa <strong>Tutki ja opi</strong>.</p>
+    <p class="hint">Jos agenttia ei näy, kouluttaja näyttää harjoituksen edestä. Älä käytä aikaa agentin etsimiseen kesken harjoituksen.</p>
+    <figure>
+      <img src="kuvat/01-loyda-tutki-ja-opi-korostettu.png" alt="Copilotin agenttivalikko, jossa on korostettu Tutki ja opi -agentti." width="1500" height="770" loading="lazy">
+      <figcaption>Avaa Tutki ja opi Agent Storesta.</figcaption>
+    </figure>
+  </section>
+
+  <section class="step">
+    <div class="step-head">
+      <span class="step-num">VAIHE 2/5</span>
+      <h2>Valitse oppimisen tapa</h2>
+    </div>
+    <p>Valitse <strong>Ymmärtäminen</strong>.</p>
+    <p class="hint">Muut vaihtoehdot, kuten Opetuskortit ja Tietovisa, tuottavat erilaisia oppimisaktiviteetteja. Tässä harjoituksessa tarkastellaan keskustelevaa oppimista.</p>
+    <figure>
+      <img src="kuvat/02-valitse-ymmartaminen-korostettu.png" alt="Tutki ja opi -agentin aloitusnäkymä, jossa on korostettu Ymmärtäminen-vaihtoehto." width="1100" height="760" loading="lazy">
+      <figcaption>Valitse Ymmärtäminen.</figcaption>
+    </figure>
+  </section>
+
+  <section class="step">
+    <div class="step-head">
+      <span class="step-num">VAIHE 3/5</span>
+      <h2>Kopioi oppimispyyntö</h2>
+    </div>
+    <blockquote id="teksti-pyynto">Haluan ymmärtää inflaation käsitteen. Aloita kahdella kysymyksellä, joilla selvität, mitä jo tiedän. Älä anna heti valmista määritelmää. Pyydä minua ensin selittämään asia omin sanoin. Korjaa mahdollinen väärinkäsitys ja testaa lopuksi osaamistani uudella arkisella tilanteella.</blockquote>
+    <div><button class="copy-btn" type="button" data-copy="#teksti-pyynto">Kopioi oppimispyyntö</button></div>
+    <p>Valitse <strong>Lähetä</strong>.</p>
+    <figure>
+      <img src="kuvat/03-kirjoita-oppimispyynto-korostettu.png" alt="Keskustelukenttä, jossa on korostettu oppimispyynnön kirjoittaminen ja lähettäminen." width="1100" height="740" loading="lazy">
+      <figcaption>Kirjoita pyyntö, joka vaatii oppijaa ajattelemaan.</figcaption>
+    </figure>
+  </section>
+
+  <section class="step">
+    <div class="step-head">
+      <span class="step-num">VAIHE 4/5</span>
+      <h2>Arvioi ensimmäinen vastaus ennen jatkamista</h2>
+    </div>
+    <p>Pohtikaa:</p>
+    <ol>
+      <li>Kartoittiko agentti oppijan aikaisempaa tietoa?</li>
+      <li>Pyysikö se oppijaa ajattelemaan ennen selitystä?</li>
+      <li>Oliko kysymysten kieli ja vaikeustaso sopiva?</li>
+      <li>Jäikö varsinainen ajattelutyö oppijalle?</li>
+      <li>Mitä opettajan pitäisi vielä ohjeistaa oppilaille?</li>
+    </ol>
+    <figure>
+      <img src="kuvat/04-arvioi-oppimiskeskustelu-korostettu.png" alt="Agentin ensimmäinen vastaus, jossa on korostettu oppijalle esitetyt kysymykset." width="1150" height="820" loading="lazy">
+      <figcaption>Arvioi, kysyykö agentti ennen kuin se selittää.</figcaption>
+    </figure>
+  </section>
+
+  <section class="step">
+    <div class="step-head">
+      <span class="step-num">VAIHE 5/5</span>
+      <h2>Parikeskustelu</h2>
+    </div>
+    <p>Täydentäkää lause:</p>
+    <blockquote>Tämä tukee oppimista silloin, kun ________. Tämä voi haitata oppimista silloin, kun ________.</blockquote>
+    <div class="insight">
+      <div class="kicker">Ydinhavainto</div>
+      <p>Pedagoginen toimintatapa syntyy pyynnöstä ja oppijan toiminnasta, ei pelkästään agentin nimestä.</p>
+    </div>
+  </section>
+
+  <footer class="page">
+    Copilot-näkymä tarkistettu 9.8.2026. Harjoituksessa käytetään vain kuvitteellista aineistoa — ei henkilötietoja eikä oppilastöitä.
+  </footer>
+</main>
+</body>
+</html>

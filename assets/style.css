@@ -1,0 +1,253 @@
+/* Munkkiniemen yhteiskoulun Copilot-harjoitukset — yhteinen tyyli */
+
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+  --bg: #F4F6FB;
+  --text: #15171E;
+  --muted: #5A6072;
+  --faint: #9AA1B4;
+  --accent: #4269D3;
+  --accent-dark: #3050AA;
+  --green: #0F9D6C;
+  --border: #E2E5EE;
+  --card: #FFFFFF;
+  --radius: 14px;
+  --sans: 'Hanken Grotesk', system-ui, sans-serif;
+  --serif: 'Newsreader', Georgia, serif;
+  --mono: 'JetBrains Mono', Consolas, monospace;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-dark); text-decoration: underline; }
+
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px 24px 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+main.etusivu { padding-top: 64px; gap: 36px; }
+
+p, ol, ul { margin: 0; }
+ol { padding-left: 22px; display: flex; flex-direction: column; gap: 6px; }
+
+.back-link { font-family: var(--mono); font-size: 13px; }
+
+header.page { display: flex; flex-direction: column; gap: 14px; }
+
+.kicker {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.kicker.dim { color: var(--faint); }
+
+h1 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+h2 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 26px;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.lead { color: var(--muted); text-wrap: pretty; }
+.note { font-size: 13px; color: var(--faint); }
+.hint { color: var(--muted); }
+
+/* Kortit */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Etusivun harjoituskortit */
+nav.exercises { display: flex; flex-direction: column; gap: 14px; }
+a.exercise-card {
+  display: block;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 26px;
+  color: var(--text);
+}
+a.exercise-card:hover { background: var(--bg); text-decoration: none; }
+a.exercise-card .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+a.exercise-card .arrow { font-family: var(--mono); font-size: 13px; color: var(--accent); }
+a.exercise-card .title {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 23px;
+  letter-spacing: -0.01em;
+  margin-top: 6px;
+}
+a.exercise-card p { color: var(--muted); font-size: 15px; margin-top: 6px; }
+
+/* Vaiheet */
+section.step { display: flex; flex-direction: column; gap: 16px; }
+.step-head { display: flex; align-items: baseline; gap: 12px; }
+.step-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+/* Kopioitava teksti */
+blockquote {
+  margin: 0;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+}
+
+.copy-btn {
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 600;
+  color: #FFFFFF;
+  background: var(--accent);
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  cursor: pointer;
+  min-height: 44px;
+}
+.copy-btn:hover { background: var(--accent-dark); }
+.copy-btn.copied { background: var(--green); }
+
+/* Nuolilistat */
+ul.arrows { padding: 0; list-style: none; display: flex; flex-direction: column; gap: 6px; }
+ul.arrows li::before { content: "→ "; font-family: var(--mono); color: var(--accent); }
+
+/* Parin roolit */
+.role-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.role-grid .card { padding: 18px 20px; gap: 6px; }
+@media (max-width: 560px) { .role-grid { grid-template-columns: 1fr; } }
+
+/* Kuvat */
+figure { margin: 8px 0 0; display: flex; flex-direction: column; gap: 8px; }
+figure img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--card);
+  cursor: zoom-in;
+  display: block;
+}
+figcaption { font-size: 13px; color: var(--faint); }
+
+/* Ydinhavainto */
+.insight {
+  background: linear-gradient(135deg, #EEF3FE, #F6F1FC);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+}
+.insight .kicker { margin-bottom: 6px; }
+
+/* Taulukot (ohjaajan sivu) */
+table { border-collapse: collapse; width: 100%; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+th, td { text-align: left; padding: 10px 16px; border-bottom: 1px solid var(--border); font-size: 15px; }
+th { font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--faint); }
+tr:last-child td { border-bottom: none; }
+td:first-child { font-family: var(--mono); font-size: 13px; color: var(--accent); white-space: nowrap; }
+
+footer.page {
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+  font-size: 13px;
+  color: var(--faint);
+  text-wrap: pretty;
+}
+
+/* Kuvan suurennus */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(21, 23, 30, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  z-index: 100;
+  cursor: zoom-out;
+}
+.lightbox.open { display: flex; }
+.lightbox img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+  background: var(--card);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .lightbox.open img { animation: lb-in 140ms ease-out; }
+  @keyframes lb-in { from { transform: scale(0.97); opacity: 0.6; } }
+}
+
+/* Tuloste: osallistujan ohje suoraan sivusta */
+@media print {
+  body { background: #FFFFFF; font-size: 12pt; }
+  main { padding: 0; gap: 24px; max-width: none; }
+  .back-link, .copy-btn, .print-btn, .lightbox { display: none !important; }
+  a { color: var(--text); }
+  figure img { cursor: auto; max-height: 88mm; width: auto; max-width: 100%; }
+  section.step { break-inside: avoid; }
+  .insight { background: #FFFFFF; }
+  h1 { font-size: 24pt; }
+  h2 { font-size: 16pt; }
+}
+
+.print-btn {
+  align-self: flex-start;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--accent);
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+.print-btn:hover { background: var(--card); }
