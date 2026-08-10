@@ -17,6 +17,8 @@ paikallisesti suoraan selaimeen.
 | `tutki-ja-opi.html` | Harjoitus 3: Tutki ja opi (7–9 min) |
 | `ohjaaja.html` | Kouluttajan aikataulut, purkukysymykset ja varasuunnitelmat — ei linkitetty etusivulta |
 | `diat.html` | Koulutuksen esitysdiat (itsenäinen paketti, viety Claude-artifactista) |
+| `mikrotehtava-kuva.html` | Mikrotehtävä: Luo yksi kuvituskuva (5 min) |
+| `mikrotehtava-konteksti.html` | Mikrotehtävä: Mitä konteksti muuttaa? (pareittain, 6 min) |
 | `kuvat/` | Numeroidut vaihekuvat (korostetut kuvakaappaukset) |
 | `assets/` | Tyylit sekä kopiointi-, zoomaus- ja tulostustoiminnot |
 

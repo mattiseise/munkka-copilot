@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mikrotehtävä: Mitä konteksti muuttaa? — Copilot-harjoitukset</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%234269D3'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia,serif' font-size='18' font-weight='600' fill='white'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/site.js" defer></script>
+<style>
+  .ctx-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 20px; }
+  @media (max-width: 640px) { .ctx-grid { grid-template-columns: 1fr; } }
+  .ctx-card { background: #fff; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; }
+  .ctx-card .ctx-head { padding: 14px 22px; font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; }
+  .ctx-card.a .ctx-head { background: #FDF2F0; color: #C0392B; }
+  .ctx-card.b .ctx-head { background: #F0F9F4; color: #2F9E69; }
+  .ctx-card .ctx-body { padding: 18px 22px; display: flex; flex-direction: column; gap: 10px; }
+</style>
+</head>
+<body>
+<main>
+  <a class="back-link" href="index.html">← Takaisin harjoituksiin</a>
+  <header class="page">
+    <div class="kicker">Mikrotehtävä · Pareittain · 6 min</div>
+    <h1>Mitä konteksti muuttaa?</h1>
+    <p class="lead">Kokeilkaa samaa tavoitetta kahdella erilaisella pyynnöllä.</p>
+    <button class="print-btn" type="button">Tulosta osallistujan ohje</button>
+  </header>
+
+  <section class="step">
+    <div class="ctx-grid">
+      <div class="ctx-card a">
+        <div class="ctx-head">A · Niukka konteksti · 1 min</div>
+        <div class="ctx-body">
+          <p>Parin ensimmäinen lähettää Copilotille:</p>
+          <blockquote id="teksti-a">Laadi viisi harjoitusta fotosynteesistä 7. luokalle.</blockquote>
+          <div><button class="copy-btn" type="button" data-copy="#teksti-a">Kopioi A</button></div>
+        </div>
+      </div>
+      <div class="ctx-card b">
+        <div class="ctx-head">B · Tarkka konteksti · 2 min</div>
+        <div class="ctx-body">
+          <p>Parin toinen lähettää Copilotille:</p>
+          <blockquote id="teksti-b">Laadi viisi harjoitusta fotosynteesistä 7. luokan biologian kertaukseen ennen koetta. Tee kaksi tunnistamistehtävää, kaksi selittämistehtävää ja yksi soveltava tehtävä. Anna vastaukset erillisessä osiossa. Käytä oppilaille sopivaa kieltä ja merkitse kohdat, joiden terminologia opettajan pitää tarkistaa.</blockquote>
+          <div><button class="copy-btn" type="button" data-copy="#teksti-b">Kopioi B</button></div>
+          <p class="note">Jos teet molemmat itse, avaa B:tä varten uusi keskustelu.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="step">
+    <div class="step-head">
+      <span class="step-num">VERTAILKAA · 3 MIN</span>
+    </div>
+    <ol>
+      <li>Mikä vastauksissa muuttui?</li>
+      <li>Mitä Copilot joutui A:ssa arvaamaan?</li>
+      <li>Mitä B:n vastauksesta pitää edelleen tarkistaa?</li>
+    </ol>
+    <p class="hint">Olkaa valmiit kertomaan yksi havainto.</p>
+  </section>
+
+  <section class="insight">
+    <div class="kicker">Ydinhavainto</div>
+    <p>Konteksti ohjaa vastausta. Tarkistusvastuu säilyy opettajalla.</p>
+  </section>
+
+  <footer class="page">
+    Copilot-näkymä tarkistettu 9.8.2026. Harjoituksessa käytetään vain kuvitteellista aineistoa — ei henkilötietoja eikä oppilastöitä.
+  </footer>
+</main>
+</body>
+</html>
