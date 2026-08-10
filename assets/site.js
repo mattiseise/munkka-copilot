@@ -62,4 +62,17 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.print-btn').forEach(function (btn) {
     btn.addEventListener('click', function () { window.print(); });
   });
+
+  // Varareitti-modaalit
+  document.querySelectorAll('[data-dialog]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var d = document.querySelector(btn.getAttribute('data-dialog'));
+      if (d && typeof d.showModal === 'function') d.showModal();
+    });
+  });
+  document.querySelectorAll('dialog.fallback-dialog').forEach(function (d) {
+    d.addEventListener('click', function (e) { if (e.target === d) d.close(); });
+    var c = d.querySelector('.dialog-close');
+    if (c) c.addEventListener('click', function () { d.close(); });
+  });
 });

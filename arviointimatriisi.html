@@ -29,6 +29,7 @@
     </div>
     <p>Valitse:</p>
     <p><strong>Opeta → Kotitehtävät ja arvioinnit → Arvosteluohje</strong></p>
+    <button class="fallback-trigger" type="button" data-dialog="#varareitti">Opeta-valikkoa ei näy? Avaa varareitti: sama Copilot Chatissa →</button>
     <figure>
       <img src="kuvat/01-loyda-arvosteluohje-korostettu.png" alt="Copilotin Opeta-näkymä, jossa on korostettu Kotitehtävät ja arvioinnit -välilehti ja Arvosteluohje-työkalu." width="950" height="710" loading="lazy">
       <figcaption>Avaa Arvosteluohje.</figcaption>
@@ -40,7 +41,7 @@
       <span class="step-num">VAIHE 2/5</span>
       <h2>Kuvaa arvioitava tehtävä</h2>
     </div>
-    <p>Valitse <strong>8. luokka</strong> ja <strong>suomi</strong>.</p>
+    <p>Valitse luokka-asteeksi <strong>8. luokka</strong> ja oppiaineeksi <strong>suomi</strong>.</p>
     <p>Kirjoita otsikoksi:</p>
     <blockquote>Lähdekriittisen vertailun arviointimatriisi</blockquote>
     <p>Kopioi kuvaukseksi:</p>
@@ -60,7 +61,7 @@
     </div>
     <p>Käytä asteikkoa:</p>
     <p><strong>Erinomainen – Hyvä – Kohtalainen – Heikko</strong></p>
-    <p>Valitkaa vain nämä kolme kriteeriä:</p>
+    <p>Copilot ehdottaa kriteerejä omilla nimillään, jotka voivat vaihdella — valitkaa näitä lähimmin vastaavat kolme:</p>
     <ol>
       <li>Lähdetietojen tunnistus</li>
       <li>Väitteiden arviointi</li>
@@ -113,6 +114,20 @@
   <footer class="page">
     Copilot-näkymä tarkistettu 9.8.2026. Harjoituksessa käytetään vain kuvitteellista tehtävää — ei henkilötietoja eikä oppilastöitä.
   </footer>
+
+  <dialog class="fallback-dialog" id="varareitti">
+    <div class="dialog-inner">
+      <div class="dialog-head">
+        <div class="kicker">Varareitti · Copilot Chat</div>
+        <button class="dialog-close" type="button">Sulje ✕</button>
+      </div>
+      <h2>Arviointimatriisi tavallisessa Copilot Chatissa</h2>
+      <p>Jos Opeta-valikkoa tai Arvosteluohje-työkalua ei näy tunnuksellasi, tee sama harjoitus Copilot Chatissa. Kopioi kehote, lähetä se chattiin ja jatka sitten vaiheesta 4 (tarkistakaa yksi kokonainen rivi) normaalisti.</p>
+      <blockquote id="fb-matriisi">Olen yläkoulun opettaja. Laadi arviointimatriisi taulukkona asteikolla Erinomainen – Hyvä – Kohtalainen – Heikko. Käytä täsmälleen kolmea kriteeriä: lähdetietojen tunnistus, väitteiden arviointi ja lähdekriittinen päättely. Arvioitava tehtävä: 8. luokan tehtävässä oppilas vertailee kahta samaa tapahtumaa käsittelevää verkkotekstiä. Arvioinnin kohteena ovat lähteiden perustietojen tunnistaminen, väitteiden ja lähteiden tarkastelu, tekstien vertailu sekä vähintään kolmen perustellun havainnon esittäminen. Matriisin tulee arvioida oppilaan omaa lähdekriittistä päättelyä, ei tekstin pituutta tai ulkoasua.</blockquote>
+      <div><button class="copy-btn" type="button" data-copy="#fb-matriisi">Kopioi kehote</button></div>
+      <p class="note">Muokkauspyynnöt (vaihe 4) toimivat chatissa jatkoviesteinä, esim. "Muokkaa kriteerin X tasokuvauksia niin, että vierekkäiset tasot erottuvat selvemmin."</p>
+    </div>
+  </dialog>
 </main>
 </body>
 </html>

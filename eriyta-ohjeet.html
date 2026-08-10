@@ -29,6 +29,7 @@
     </div>
     <p>Valitse Microsoft 365 Copilotissa:</p>
     <p><strong>Opeta → Muokkaa aiemmin luotua sisältöä → Eriytä ohjeet</strong></p>
+    <button class="fallback-trigger" type="button" data-dialog="#varareitti">Opeta-valikkoa ei näy? Avaa varareitti: sama Copilot Chatissa →</button>
     <figure>
       <img src="kuvat/01-loyda-eriyta-ohjeet-korostettu.png" alt="Copilotin Opeta-näkymä, jossa on korostettu Muokkaa aiemmin luotua sisältöä -välilehti ja Eriytä ohjeet -työkalu." width="1100" height="790" loading="lazy">
       <figcaption>Valitse ensin Muokkaa aiemmin luotua sisältöä ja sitten Eriytä ohjeet.</figcaption>
@@ -54,7 +55,7 @@
       <li><strong>Luokka-aste:</strong> 8. luokka</li>
       <li><strong>Pituus:</strong> Alkuperäinen</li>
     </ul>
-    <p>Jakakaa roolit:</p>
+    <p>Jakakaa roolit — molemmat tekevät silti kaikki vaiheet omalla koneellaan, vain tämä yksi valinta eroaa:</p>
     <div class="role-grid">
       <div class="card">
         <div class="kicker dim">Henkilö A</div>
@@ -118,6 +119,24 @@
   <footer class="page">
     Copilot-näkymä tarkistettu 9.8.2026. Harjoituksessa käytetään vain kuvitteellista tehtävää — ei henkilötietoja eikä oppilastöitä.
   </footer>
+
+  <dialog class="fallback-dialog" id="varareitti">
+    <div class="dialog-inner">
+      <div class="dialog-head">
+        <div class="kicker">Varareitti · Copilot Chat</div>
+        <button class="dialog-close" type="button">Sulje ✕</button>
+      </div>
+      <h2>Eriytä ohjeet tavallisessa Copilot Chatissa</h2>
+      <p>Jos Opeta-valikkoa tai Eriytä ohjeet -työkalua ei näy tunnuksellasi, tee sama harjoitus Copilot Chatissa. Kopioi roolisi mukainen kehote, lähetä se chattiin ja jatka sitten vaiheesta 4 normaalisti.</p>
+      <div class="kicker dim">Henkilö A · Vaiheittainen</div>
+      <blockquote id="fb-a">Olen yläkoulun opettaja. Eriytä alla oleva tehtävänanto 8.-luokkalaiselle, joka hyötyy vaiheittaisista ohjeista. Säilytä oppimistavoite: oppilas vertailee lähteitä ja perustelee itse johtopäätöksensä. Älä anna valmiita vastauksia äläkä lisää tehtävään uusia arvioitavia asioita. Jaa työskentely selkeiksi vaiheiksi ja lisää oppilaan ajattelua ohjaavia kysymyksiä. Tehtävänanto: Lähdekriittinen vertailu, 8. luokka. Oppilas vertailee kahta samaa ajankohtaista tapahtumaa käsittelevää verkkotekstiä. Oppilas tunnistaa tekstien kirjoittajan, julkaisupaikan, julkaisupäivän, käytetyt lähteet ja väitteiden perustelut. Lopuksi oppilas perustelee vähintään kolmella havainnolla, kumpaa tekstiä hän pitää luotettavampana lähteenä. Lähteen luotettavuutta ei saa arvioida vain tekstin ulkoasun perusteella.</blockquote>
+      <div><button class="copy-btn" type="button" data-copy="#fb-a">Kopioi A:n kehote</button></div>
+      <div class="kicker dim">Henkilö B · Vihjeet</div>
+      <blockquote id="fb-b">Olen yläkoulun opettaja. Eriytä alla oleva tehtävänanto 8.-luokkalaiselle antamalla oivalluttavia vihjeitä valmiiden työvaiheiden sijaan. Säilytä oppimistavoite: oppilas vertailee lähteitä ja perustelee itse johtopäätöksensä. Älä anna valmiita vastauksia äläkä lisää tehtävään uusia arvioitavia asioita. Tehtävänanto: Lähdekriittinen vertailu, 8. luokka. Oppilas vertailee kahta samaa ajankohtaista tapahtumaa käsittelevää verkkotekstiä. Oppilas tunnistaa tekstien kirjoittajan, julkaisupaikan, julkaisupäivän, käytetyt lähteet ja väitteiden perustelut. Lopuksi oppilas perustelee vähintään kolmella havainnolla, kumpaa tekstiä hän pitää luotettavampana lähteenä. Lähteen luotettavuutta ei saa arvioida vain tekstin ulkoasun perusteella.</blockquote>
+      <div><button class="copy-btn" type="button" data-copy="#fb-b">Kopioi B:n kehote</button></div>
+      <p class="note">Vaiheen 5 korjauspyyntö toimii chatissa sellaisenaan jatkoviestinä.</p>
+    </div>
+  </dialog>
 </main>
 </body>
 </html>
